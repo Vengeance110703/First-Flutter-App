@@ -15,6 +15,10 @@ class MyApp extends StatelessWidget {
           title: const Text("New Appbar"),
         ),
         body: const Text("Body"),
+        bottomNavigationBar: BottomNavigationBar(items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings')
+        ]),
       ),
       debugShowCheckedModeBanner: false,
     );

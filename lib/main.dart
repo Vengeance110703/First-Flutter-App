@@ -55,13 +55,13 @@ class _MyAppState extends State<MyApp> {
                       ],
                     ),
                   )
-                : Image.network(
-                    'https://firebasestorage.googleapis.com/v0/b/pixel-vault-db6a1.appspot.com/o/photos%2F08ff53a5-0902-4f2d-a2a0-153542576697_Yanfei.jpg?alt=media&token=9eaf2755-fadb-4057-b254-d602d7c04a1b')),
+                : Image.asset('images/Yanfei.jpg')),
+        // Image.network(
+        //     'https://firebasestorage.googleapis.com/v0/b/pixel-vault-db6a1.appspot.com/o/photos%2F08ff53a5-0902-4f2d-a2a0-153542576697_Yanfei.jpg?alt=media&token=9eaf2755-fadb-4057-b254-d602d7c04a1b')),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: 'Settings')
+            BottomNavigationBarItem(icon: Icon(Icons.image), label: 'Image')
           ],
           currentIndex: currentIndex,
           onTap: (index) => {

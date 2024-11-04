@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("New Appbar"),
         ),
+        body: const Text("Body"),
       ),
       debugShowCheckedModeBanner: false,
     );

@@ -28,17 +28,21 @@ class _MyAppState extends State<MyApp> {
             child: SizedBox(
           height: double.infinity,
           width: double.infinity,
-          child: Column(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ElevatedButton(
-                  onPressed: () => {
-                        setState(() {
-                          buttonName = 'Clicked';
-                        })
-                      },
-                  child: Text(buttonName)),
+                onPressed: () => {
+                  setState(() {
+                    buttonName = 'Clicked';
+                  })
+                },
+                child: Text(buttonName),
+                style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.red,
+                    backgroundColor: Colors.orange),
+              ),
               ElevatedButton(
                   onPressed: () => {
                         setState(() {

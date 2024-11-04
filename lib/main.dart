@@ -25,9 +25,10 @@ class _MyAppState extends State<MyApp> {
           title: const Text("New Appbar"),
         ),
         body: Center(
-            child: SizedBox(
+            child: Container(
           height: double.infinity,
           width: double.infinity,
+          color: Colors.red[400],
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,10 +39,10 @@ class _MyAppState extends State<MyApp> {
                     buttonName = 'Clicked';
                   })
                 },
-                child: Text(buttonName),
                 style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.red,
                     backgroundColor: Colors.orange),
+                child: Text(buttonName),
               ),
               ElevatedButton(
                   onPressed: () => {

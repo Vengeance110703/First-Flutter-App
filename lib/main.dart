@@ -25,13 +25,26 @@ class _MyAppState extends State<MyApp> {
           title: const Text("New Appbar"),
         ),
         body: Center(
-            child: ElevatedButton(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ElevatedButton(
                 onPressed: () => {
                       setState(() {
                         buttonName = 'Clicked';
                       })
                     },
-                child: Text(buttonName))),
+                child: Text(buttonName)),
+            ElevatedButton(
+                onPressed: () => {
+                      setState(() {
+                        buttonName = 'Clicked';
+                      })
+                    },
+                child: Text(buttonName))
+          ],
+        )),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),

@@ -15,6 +15,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String buttonName = 'Click';
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,12 @@ class _MyAppState extends State<MyApp> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.settings), label: 'Settings')
           ],
-          currentIndex: 1,
+          currentIndex: currentIndex,
+          onTap: (index) => {
+            setState(() {
+              currentIndex = index;
+            })
+          },
         ),
       ),
       debugShowCheckedModeBanner: false,
